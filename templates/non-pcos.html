@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-PCOS Result</title>
+    <style>
+        html {
+        margin: auto;
+        font-family: Poppins;
+        background: linear-gradient(#bbb6e7, #bbb6e7);
+        color: #f8eff3;
+        font-size: 1.5em;
+        text-align: justify;
+      } 
+        .container {
+  position: relative;
+  text-align: center; 
+  color: white;
+ 
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.button{
+  
+  padding: 14px 40px;
+  box-shadow: 0 8px 16px 0 rgba(226, 189, 189, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #e6abcd;
+  border-radius: 12px;
+  font-weight: 200;
+  }
+    </style>
+</head>
+<body>
+    <div class="container"><div class="container">
+        <img src="{{url_for('static', filename='image.jpeg')}}" alt="Snow" style="width:100%; height: 70%; opacity: 0.5;">
+        <div class="centered">
+            <h1  style="color: black;"><i>It Seems Like You  Don't Have PCOS</i></h1>
+            <h1 style="color: black;"><i>No Need To Worry</i></h1>
+            <br>
+            <br>
+            <h3 style="color: black;"><i>To Maintain Healthy Lifestyle <a href='https://www.verywellhealth.com/can-pcos-be-prevented-4690740'>Click Here</a> </i></h3>
+        
+        </div>
+      </div>
+</body>
+</html>

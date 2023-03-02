@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Home</title>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+   html {
+    margin: auto;
+    font-family: Poppins;
+    background: linear-gradient(#f0649e, #f0649e);
+    color: #f8eff3;
+    font-size: 1.5em;
+    text-align: justify;
+  } 
+  .container-fluid{
+    height : 0px;
+    font-size:20px;
+  }
+  .row{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .test-area{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .rounded-float-left{
+    margin-top: 50px;
+  }
+  .rounded-float-right{
+    margin-top: 50px;
+    
+  }
+.user-manual{
+  
+  margin-top: 50px;
+  color: #070707;
+  font-size: 1em;
+  text-align: justify;
+}
+.button{
+  
+padding: 14px 40px;
+box-shadow: 0 8px 16px 0 rgba(226, 189, 189, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+background-color: #e6abcd;
+border-radius: 12px;
+font-weight: 200;
+}
+.logo{
+  margin-left: 0px;
+  margin-top: 0px;
+  
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <!-- <div class="container-fluid"> -->
+      <div class="navbar-header">
+        <img src="{{url_for('static', filename='logo.jpeg')}}" class="logo" width="80" height="40">
+      </div>
+      <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="text-test.html">Self Test</a></li>
+        <li><a href="image-test.html">Ultrasound Test</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </div>
+    <br>
+    <br>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4">
+        <img src="{{url_for('static', filename='pcos.png')}}" alt="responsive image"
+          class="img-fluid" width="400" height="350">
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-8">
+        <h2><strong>PCOS(Polycystic Ovary Syndrome) : </strong></h2>
+        <ul>
+          <li>Polycystic ovary syndrome (PCOS) is the most common hormonal disorder in women of reproductive age.</li>
+          <li>The global prevalence of PCOS is estimated between 4% and 20%. The World Health Organization (WHO) data suggests that approximately 116 million women (3.4%) are affected by PCOS globally.</li>
+        </ul> 
+        
+        <button class="button"  onclick="myFunction()"><B>Read More</B></button>
+        <p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Common symptoms of PCOS include:irregular periods or no periods at all,difficulty getting pregnant (because of irregular ovulation or no ovulation),excessive hair growth (hirsutism) – usually on the face, chest, back or buttocks,weight gain,thinning hair and hair loss from the head,oily skin or acne. <a href='https://www.healthline.com/health/pcos-diet'>Click Here</a> ";
+}
+</script>
+      </div>
+    </div>
+    <div class = "test-area">
+      <div class="col-xl-4 col-lg-4 col-md-4">
+      <a href="text-test.html"><img src="{{url_for('static', filename='text.jpeg')}}" class="rounded-float-left" alt="left" height="200" width="300"></a>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4">
+      <a href="image-test.html"><img src="{{url_for('static', filename='ultrasound.jpeg')}}" class="rounded-float-right" alt="right" height="200" width="300"></a>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4">
+    <a href="https://share-me.video/video/4NnVAmm85Qzc0NKgPz7MDVzPBDYG3j7inuN9B7CktgKpL8uaLoqwIjUA1FkMIiXe"><img src="{{url_for('static', filename='user.jpeg')}}" class="rounded-float-right" alt="right" height="200" width="300"></a>
+  </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

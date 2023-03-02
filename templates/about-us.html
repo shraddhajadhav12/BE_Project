@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>About Us</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+   html {
+    margin: auto;
+    font-family: Poppins;
+    background: linear-gradient(#e294b5, #da1969);
+    color: #f8eff3;
+    font-size: 1.5em;
+    text-align: justify;
+  } 
+    .container-fluid{
+    font-size:21px;
+  }
+  .row{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .rounded-circle{
+    position: relative;
+     width: 200px; 
+     height: 200px;
+      overflow: hidden;
+       border-radius: 50%;
+     }
+     .rounded-circle1{
+    position: relative;
+     width: 200px; 
+     height: 200px;
+      overflow: hidden;
+       border-radius: 50%;
+       display: block;
+  margin-left: auto;
+  margin-right: auto;
+     }
+
+
+
+  </style>
+</head>
+<body>
+<h2 style="text-align: center; color: rgb(80, 16, 16);"><strong> ABOUT US</strong></h2>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4">
+        <img src="{{url_for('static', filename='about.png')}}" alt="responsive image" class="img-fluid" width="500" height="600">
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-8">
+        <ul>
+          <li><u>OBJECTIVE</u> : To design and develop a system using Machine Learning and Deep Learning technologies which generate effective result in the diagnosis of PCOS.</li>
+          <li><u>MOTIVATION</u> : To help doctors take better treatment decisions Fast and accurate diagnosis and for Females to know about the PCOS status of body.</li>
+          <li><u>SCOPE</u> : This methodology will yield to give minimum execution time so as to save the time of doctors as it basically segment the images and then classification results will be applied accordingly.</li>
+          <li>If PCOS not detected in early stages it can cause the Fibrosis which is an uterine cancer.</li>
+          <li>It is an user friendly environment for the detection of PCOS either using an ultrasound image or by answering some of the questions.</li>
+          <li>Hopefully you like our build system and environment and yoou will take proper action according to your results.</li>
+        </ul> 
+        
+        
+      </div>
+    </div>
+
+  <h3 style="text-align: center; color: darkred;"><i><u>Paper Published On Litrature Survey Of PCOS  </u><a href='https://doi.org/10.22214/ijraset.2023.49079'><b>Check Here</a></b></i></h3>
+    <br>
+<h2 style="text-align: center; color: rgb(80, 16, 16);">Marathwada Mitra Manda's College Of Engineering,Karvenagar</h2>
+<h2 style="text-align: center; color: rgb(80, 16, 16);"> Department Of Computer Engineering</h2>
+<h2 style="text-align: center; color: blueviolet;"><strong>BE PROJECT</strong></h2>
+<h3 style="text-align: center; color: blueviolet;"><u>Design and Development of Diagnosis System For Polysistic Ovary Syndrome Detection </u></h3>
+<h4 style="color: rgb(80, 16, 16);"><strong>Group Members</strong></h4>
+<div class = "container-fluid">
+    <div class="col-xl-3 col-lg-3 col-md-3">
+    <img src="{{url_for('static', filename='sayali.jpeg')}}" class="rounded-circle" alt="Cinque Terre" width="300" height="200"> 
+    <h3 style="color: lightseagreen;"><strong>Sayali Deodikar</strong></h3>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3">
+    <img src="{{url_for('static', filename='shraddha.jpeg')}}" class="rounded-circle" alt="Cinque Terre" width="300" height="200"> 
+    <h3 style="color: lightseagreen;"><strong>Shraddha Jadhav</strong></h3>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3">
+  <img src="{{url_for('static', filename='aishwarya.jpeg')}}" class="rounded-circle" alt="Cinque Terre" width="300" height="200"> 
+  <h3 style="color: lightseagreen;"><strong>Aishwarya Joshi</strong></h3>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-3">
+<img src="{{url_for('static', filename='sejal.jpeg')}}" class="rounded-circle" alt="Cinque Terre" width="300" height="200">
+<h3 style="color: lightseagreen;"><strong>Sejal Mutakekar</strong></h3> 
+<br>
+<br>
+  </div>
+  </div>
+  <h4 style="color: rgb(80, 16, 16);"><strong>Project Guide</strong></h4>
+  <div>
+    <img src="{{url_for('static', filename='prof asma.jpg')}}" class="rounded-circle1" alt="Cinque Terre" width="300" height="200">
+    <h3 style="color: lightseagreen; text-align: center;"><strong>Prof. Asma Shaikh</strong></h3> 
+    <br>
+    <br>
+      </div>
+  <h2 style="text-align: center; color: palevioletred;"><strong><i>Thank You!!!</i></strong></h2>
+</div>
+
+</body>
+</html>

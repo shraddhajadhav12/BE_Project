@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Test</title>
+    <style>
+    html {
+        margin: auto;
+        font-family: Poppins;
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,82,1) 46%, rgba(252,176,69,1) 100%);
+        color: #fcf6f6;
+        font-size: 20pt;
+        text-align: center;
+      } 
+.button{
+  
+  padding: 14px 40px;
+  box-shadow: 0 8px 16px 0 rgba(226, 189, 189, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #c22842;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #fcf6f6;
+  font-size: 20px;
+  }
+    </style>
+</head>
+<body>
+
+    <h2 style="align-items: center; color: rgb(22, 21, 22);"><u><i>PCOS Self Diagnosis Test</i></u></h2>
+    <form action="{{ url_for('gfg')}}" method="post">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pick your age limit</h5>
+                        <select name="age" id="age" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">19-34</option>
+                            <option value="1">35-50</option>
+                            <option value="0">above 50</option>
+                            <option value="1">less than 18</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Which work profile matches you?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">student</option>
+                            <option value="1">unemploye</option>
+                            <option value="2">employe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> What is your marital status?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">married</option>
+                            <option value="1">unmarried</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How many kids do you have?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">more than 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> How would you describe your Body Physic?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">I am Underweight</option>
+                            <option value="1">I am a bit overweight</option>
+                            <option value="2">I am at a healthy weight</option>
+                            <option value="3">I am obese</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Have you done any ultrasound scanning and what does your report say?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Do you notice any of these right before your period begins? </h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">Bloating</option>
+                            <option value="1">Brast Pain</option>
+                            <option value="2">Constipation</option>
+                            <option value="3">Haedache</option>
+                            <option value="4">Mood swings</option>
+                            <option value="5">Sleeplessness</option>
+                            <option value="6">None</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Are you experiencing excessive bleeding?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> How long does your period last? </h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">3-5 Days</option>
+                            <option value="1">5-7 Days</option>
+                            <option value="0">Less Than 3 Days</option>
+                            <option value="1">More Than 7 Days</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you notice any clots during your periods?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no clots</option>
+                            <option value="1">yes large clots</option>
+                            <option value="1">yes small clots</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Is/was your mother diagnosed with PCOS/PCOD?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you suffer from diabetes? </h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you suffer from hypothyroidism?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you have acne/hyper-pigmentation?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you have the habit of consuming alcohol?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Do you have habit of smoking?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Do you exercise regularly?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> How would you describe your diet?</h5>
+                        <select name="profile" id="profile" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">Consist of high fiber and balance between carbs and proteins</option>
+                            <option value="1">Consist of packaged/processed food</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Are you experiencing irregular or late periods?</h5>
+                        <select name="rp" id="rp" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Source -->
+                        <h5 class="card-title"></h5>
+                        <h5 class="card-title">Are you experiencing painful periods?</h5>
+                        <select name="pp" id="pp" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How often do you get your periods?</h5>
+                        <!-- Destination -->
+                        <select name="pc" id="pc" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">21-40 days</option>
+                            <option value="1">less than 21 days</option>
+                            <option value="2">More than 40 days</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How would you like to rate your period pains?</h5>
+                        <!-- Total Stops -->
+                        <select name="pps" id="pps" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">Mild</option>
+                            <option value="1">Moderate</option>
+                            <option value="2">No Period Pain</option>
+                            <option value="3">Severe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Do you experience excessive growth of facial and body hair?</h5>
+                        <!-- Total Stops -->
+                        <select name="ehg" id="ehg" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Are you under any stress?</h5>
+                        <!-- Total Stops -->
+                        <select name="s" id="s" required="required">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0">no</option>
+                            <option value="1">yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- Submit -->
+        <input type="submit" value="Submit" class="button">
+    </form>
+</body>
+</html>

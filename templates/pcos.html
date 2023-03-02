@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Result</title>
+    <style>
+        html {
+        margin: auto;
+        font-family: Poppins;
+        background: linear-gradient(#bbb6e7, #bbb6e7);
+        color: #f8eff3;
+        font-size: 1.5em;
+        text-align: justify;
+      } 
+        .container {
+  position: relative;
+  text-align: center; 
+  color: white;
+ 
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.button{
+  
+  padding: 14px 40px;
+  box-shadow: 0 8px 16px 0 rgba(226, 189, 189, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #c70a78;
+  border-radius: 12px;
+  font-weight: 200;
+  color: #928adb;
+  font-size: 20pt;
+  }
+    </style>
+</head>
+<body>
+    <div class="container"><div class="container">
+        <img src="{{url_for('static', filename='image.jpeg')}}" alt="Snow" style="width:100%; height: 70%; opacity: 0.5;">
+        <div class="centered">
+            <h1  style="color: black;"><i>It Seems Like You Have PCOS</i></h1>
+            <h1 style="color: black;"><i>No Need To Worry</i></h1>
+            <br>
+            <br>
+            <h3 style="color: black;"><i>To Recover From PCOS <a href='https://www.healthline.com/health/womens-health/natural-treatment-pcos'>Click Here</a> </i></h3>
+            <br>
+            <br>
+            <button class="button" onclick="getLocation()"><strong><i><u>Visit Nearest Gynaecologist</u></i></strong></button>
+
+<p id="demo"></p>
+
+        </div>
+      </div>
+      <script>
+        var x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          location.href = `https://www.google.com/maps/search/gynecologist+near+me/@${position.coords.latitude},${position.coords.longitude},14z/data=!3m1!4b1`
+        }
+        </script>
+</body>
+</html>
